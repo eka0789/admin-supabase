@@ -386,7 +386,7 @@ export default function AdminUserManagementPage() {
                                 type="text"
                                 placeholder="Cari nama / NIK / telepon..."
                                 value={search}
-                                onChange={(e) => setSearch(e.target.value)}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
                                 className="border border-slate-300 rounded-md px-3 py-2 text-sm w-64 focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
@@ -394,7 +394,7 @@ export default function AdminUserManagementPage() {
                             <label className="text-sm font-medium text-slate-600">Role:</label>
                             <select
                                 value={roleFilter}
-                                onChange={(e) => setRoleFilter(e.target.value)}
+                                onChange={(e: ChangeEvent<HTMLSelectElement>) => setRoleFilter(e.target.value)}
                                 className="border border-slate-300 rounded-md px-2 py-1 text-sm focus:ring-2 focus:ring-green-500"
                             >
                                 <option value="ALL">Semua</option>
@@ -518,17 +518,17 @@ export default function AdminUserManagementPage() {
 
                                 <div>
                                     <Label>Nama</Label>
-                                    <Input value={editUser.name || ""} onChange={(e) => setEditUser({ ...editUser, name: e.target.value })} />
+                                    <Input value={editUser.name || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setEditUser({ ...editUser, name: e.target.value })} />
                                 </div>
 
                                 <div>
                                     <Label>Telepon</Label>
-                                    <Input value={editUser.phone || ""} onChange={(e) => setEditUser({ ...editUser, phone: e.target.value })} />
+                                    <Input value={editUser.phone || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setEditUser({ ...editUser, phone: e.target.value })} />
                                 </div>
 
                                 <div>
                                     <Label>Role</Label>
-                                    <select value={editUser.role || "member"} onChange={(e) => setEditUser({ ...editUser, role: e.target.value })} className="border border-slate-300 rounded-md px-2 py-2 text-sm w-full">
+                                    <select value={editUser.role || "member"} onChange={(e: ChangeEvent<HTMLSelectElement>) => setEditUser({ ...editUser, role: e.target.value })} className="border border-slate-300 rounded-md px-2 py-2 text-sm w-full">
                                         <option value="admin">Admin</option>
                                         <option value="kacab">Kacab</option>
                                         <option value="marketing">Marketer</option>
