@@ -4,8 +4,3 @@
 
 /* optional: tambahkan tema */
 @import "tailwindcss/theme" layer(theme);
-
-/* custom global style */
-body {
-  @apply bg-slate-50 text-gray-800;
-}
